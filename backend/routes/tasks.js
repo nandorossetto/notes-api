@@ -9,4 +9,10 @@ router
 router
     .route("/tasks/:id")
     .get((req, res) => taskController.getById(req, res));
+router
+    .route("/tasks/:id")
+    .delete((req, res) => taskController.delete(req, res));
+router
+    .route("/tasks/:id")
+    .put((req, res) => taskController.update(req, res));    
 module.exports = router; 
