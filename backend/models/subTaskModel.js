@@ -1,15 +1,16 @@
 const mongoose = require("mongoose");
 const { Schema } = mongoose;
-const subTaskSchema = new Schema({
+const subTaskSchema = new Schema(
+    {
         name: {
         type: String,
         required: true
     },
-    description: {
+        description: {
         type: String,
         required: true
     },
-    status: {
+        status: {
         type: Boolean,
         required: true
     }    

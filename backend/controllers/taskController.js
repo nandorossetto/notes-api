@@ -6,7 +6,7 @@ const taskController = {
                 task.name = req.body.name;
                 task.description = req.body.description;
                 task.status = req.body.status;
-                task.subTask = req.body.subTask;
+                task.subTask = req.body.subTask;            
             const response = await TaskModel.create(task);
             res.status(201).json({response, 
                 msg: "Created task"

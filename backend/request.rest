@@ -2,9 +2,21 @@ POST http://localhost:3000/api/tasks
 Content-Type: application/json
 
 {
-    "name": "teste delete",
-    "description": "fer",
-    "status": false
+    "name": "Limpar cozinha",
+    "description": "limpar a cozinha toda",
+    "status": false,
+    "subTask": [
+        {
+            "name": "Lavar a louça",
+            "description": "Deixar pratos de molho",
+            "status": false
+        },
+        {
+            "name": "Passar pano",
+            "description": "Deixar o pano secando do lado de fora",
+            "status": false
+        }
+    ]
 }
 
 ###
@@ -17,11 +29,23 @@ GET http://localhost:3000/api/tasks/670c1d086c09f150eb7528b6
 DELETE http://localhost:3000/api/tasks/670c1d086c09f150eb7528b6
 
 ###
-PUT http://localhost:3000/api/tasks/670c1ef71505c14399533971
+PUT http://localhost:3000/api/tasks/670af2cc641b3cdfc07063b2
 Content-Type: application/json
 
 {
-    "name": "Atualizar registro",
-    "description": "fernando",
-    "status": true
+    "name": "Limpar cozinha",
+    "description": "limpar a cozinha toda",
+    "status": false,
+    "subTask": [
+        {
+            "name": "Lavar a louça",
+            "description": "Deixar pratos de molho",
+            "status": false,
+        },
+        {
+            "name": "Passar pano",
+            "description": "Deixar o pano secando do lado de fora",
+            "status": false,
+        }
+    ]
 }
