@@ -1,10 +1,11 @@
 const mongoose = require("mongoose");
+const DB_USER = process.env.DB_USER;
+const DB_PASS = process.env.DB_PASS;
 async function main() {
     try{
         mongoose.set("strictQuery", true);
         await mongoose.connect(
-            // "mongodb+srv://nandorossetto:tzhoki46@cluster0.hk758.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
-            "mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+2.3.8"
+            "mongodb+srv://" + DB_USER + ":" + DB_PASS + "@cluster0.hk758.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
         );
         console.log("DB Connected");
     }catch(error){
